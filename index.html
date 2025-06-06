@@ -2,107 +2,106 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Yash Vaghasiya - Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yash Vaghasiya - Python Developer & AI Enthusiast</title>
   <style>
-    * {margin: 0; padding: 0; box-sizing: border-box;}
     body {
-      font-family: 'Poppins', sans-serif;
-      background: #0f0f0f;
-      color: #f2f2f2;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
+      margin: 0;
+      padding: 20px;
       line-height: 1.6;
     }
-    header {
-      background: #1f1f1f;
-      padding: 40px 20px;
+    h1, h3 {
       text-align: center;
     }
-    header h1 { font-size: 2.5rem; color: #00ff99; }
-    header h2 { font-size: 1.2rem; color: #cccccc; margin-top: 10px; }
-    section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
+    h1 {
+      margin-bottom: 0;
     }
-    h3 { color: #00ffcc; margin-bottom: 15px; }
-    ul { list-style: none; padding-left: 0; }
-    li { margin-bottom: 10px; }
-    .projects li span { color: #ccc; }
-    .social a {
-      margin-right: 15px;
-      color: #00ccff;
+    h3 {
+      margin-top: 5px;
+      color: #bbb;
+    }
+    hr {
+      border: 1px solid #333;
+      margin: 20px 0;
+    }
+    ul {
+      max-width: 600px;
+      margin: 0 auto 30px auto;
+      padding-left: 0;
+      list-style: none;
+    }
+    li {
+      background: #1f1f1f;
+      margin: 8px 0;
+      padding: 10px 15px;
+      border-radius: 6px;
+    }
+    a {
+      color: #61dafb;
       text-decoration: none;
     }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #1f1f1f;
-      color: #777;
+    a:hover {
+      text-decoration: underline;
     }
-    p {
-      margin-bottom: 15px;
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .contact {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .tech-stack {
+      text-align: center;
+      font-family: monospace;
+      background: #1f1f1f;
+      padding: 10px;
+      border-radius: 6px;
+      max-width: 600px;
+      margin: 0 auto;
+      user-select: none;
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <h1>Hi 👋, I'm Yash Vaghasiya</h1>
+    <h3>Full Python Developer & AI Enthusiast from India 🇮🇳</h3>
+    <hr />
 
-  <header>
-    <h1>Yash Vaghasiya</h1>
-    <h2>Full Python Developer & AI Enthusiast</h2>
-  </header>
+    <section>
+      <h2>💡 What I love working on:</h2>
+      <ul>
+        <li>🧠 AI & Machine Learning</li>
+        <li>🛠️ Automation Tools</li>
+        <li>🤖 Voice Assistants</li>
+        <li>🔢 Smart Applications</li>
+      </ul>
+    </section>
 
-  <section>
-    <h3>About Me</h3>
-    <p>
-      Hello! I'm Yash, a passionate Python developer and AI/ML enthusiast from India 🇮🇳.
-      Currently pursuing MCA at Parul University, I enjoy building intelligent systems and exploring real-world applications of artificial intelligence.
-    </p>
-  </section>
+    <section>
+      <h2>📂 My Projects:</h2>
+      <ul>
+        <li>🎙️ <a href="https://github.com/v1yash/new-personal-assistant" target="_blank">New Personal Assistant</a></li>
+        <li>🧮 <a href="https://github.com/v1yash/smart-calculator1" target="_blank">Smart Calculator</a></li>
+        <li>🔥 <a href="https://github.com/v1yash/ahuti" target="_blank">Ahuti (AI Project)</a></li>
+        <li>🧑‍💻 <a href="https://github.com/v1yash/virtual-assistant" target="_blank">Virtual Assistant</a></li>
+        <li>🧠 <a href="https://github.com/v1yash/AI" target="_blank">AI Models & Experiments</a></li>
+      </ul>
+    </section>
 
-  <section>
-    <h3>Skills</h3>
-    <ul>
-      <li>✔ Python (OOP, Exception Handling, File Handling, GUI with Tkinter)</li>
-      <li>✔ Artificial Intelligence (Search Algorithms, NLP, Neural Networks)</li>
-      <li>✔ Machine Learning (Scikit-Learn, Pandas, NumPy)</li>
-      <li>✔ Computer Vision (OpenCV, Image Processing)</li>
-      <li>✔ MySQL (CRUD operations, joins, optimization)</li>
-      <li>✔ Tools: GitHub, VS Code, Jupyter Notebook</li>
-      <li>✔ Strong Communication & Team Collaboration Skills</li>
-    </ul>
-  </section>
+    <section class="contact">
+      <h2>📫 Connect with me:</h2>
+      <p>💼 <a href="https://www.linkedin.com/in/yash-vaghasiya-a458972a9" target="_blank">LinkedIn</a></p>
+      <p>📧 <a href="mailto:vaghasiyash2607@gmail.com">vaghasiyash2607@gmail.com</a></p>
+    </section>
 
-  <section>
-    <h3>Projects</h3>
-    <ul class="projects">
-      <li>
-        <strong>🧮 Smart Calculator (Python + Voice)</strong><br />
-        <span>Built an intelligent calculator with voice input using speech recognition and text-to-speech libraries. It can understand natural voice commands and solve basic to advanced mathematical expressions. Also includes a GUI using Tkinter.</span>
-      </li>
-      <li>
-        <strong>🤟 Sign Language to Text Converter</strong><br />
-        <span>Developed a computer vision-based tool that translates hand gestures (sign language) into real-time English text using Python, OpenCV, and Mediapipe. This project helps bridge communication for the hearing impaired.</span>
-      </li>
-      <li>
-        <strong>🧠 AI in Healthcare (Research)</strong><br />
-        <span>Published a review paper on the role of AI in healthcare, covering 8 major domains like diagnosis, robotic surgery, medical imaging, patient data analytics, etc.</span>
-      </li>
-    </ul>
-  </section>
-
-  <section>
-    <h3>Contact</h3>
-    <p>Email: yashvaghasiya@gmail.com</p>
-    <div class="social">
-      <a href="https://github.com/v1yash" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/yash-vaghasiya-a458972a9" target="_blank">LinkedIn</a>
-    </div>
-  </section>
-
-  <footer>
-    &copy; 2025 Yash Vaghasiya. All rights reserved.
-  </footer>
-
+    <section class="tech-stack">
+      <p>Tools & Technologies: <code>Python</code> <code>MySQL</code> <code>Tkinter</code> <code>Machine Learning</code> <code>GitHub</code> <code>OOP</code> <code>AI Frameworks</code></p>
+    </section>
+  </div>
 </body>
 </html>
