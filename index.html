@@ -7,71 +7,153 @@
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #121212;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a, #222222);
       color: #e0e0e0;
       margin: 0;
       padding: 20px;
       line-height: 1.6;
+      background-attachment: fixed;
     }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 0 30px #00ffe010;
+    }
+
+    .profile-pic {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .profile-pic img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 4px solid #00ffcc;
+      box-shadow: 0 0 15px #00ffcc80;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .profile-pic img:hover {
+      transform: scale(1.05);
+    }
+
     h1, h3 {
       text-align: center;
     }
+
     h1 {
       margin-bottom: 0;
     }
+
     h3 {
       margin-top: 5px;
       color: #bbb;
     }
+
     hr {
       border: 1px solid #333;
       margin: 20px 0;
     }
+
     ul {
       max-width: 600px;
       margin: 0 auto 30px auto;
       padding-left: 0;
       list-style: none;
     }
+
     li {
       background: #1f1f1f;
       margin: 8px 0;
       padding: 10px 15px;
       border-radius: 6px;
     }
+
     a {
       color: #61dafb;
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
     }
-    .container {
-      max-width: 700px;
-      margin: 0 auto;
-    }
+
     .contact {
       text-align: center;
       margin-top: 40px;
     }
-    .tech-stack {
-      text-align: center;
-      font-family: monospace;
-      background: #1f1f1f;
-      padding: 10px;
-      border-radius: 6px;
-      max-width: 600px;
-      margin: 0 auto;
+
+    .badge-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .badge {
+      background: linear-gradient(135deg, #00ffcc, #ff00cc);
+      color: #000;
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-weight: bold;
+      box-shadow: 0 0 5px #00ffe060;
+      transition: transform 0.2s;
       user-select: none;
+    }
+
+    .badge:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 10px #ff00cc;
+    }
+
+    .slider {
+      position: relative;
+      width: 100%;
+      max-width: 700px;
+      height: 400px;
+      margin: 30px auto;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 0 20px #00ffe080;
+      background: #000;
+    }
+
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      object-fit: contain;
+      background: #000;
+    }
+
+    .slide.active {
+      opacity: 1;
+      z-index: 1;
     }
   </style>
 </head>
 <body>
   <div class="container">
+
+    <div class="profile-pic">
+      <img src="20241228_172113.jpg" alt="Yash Vaghasiya" />
+    </div>
+
     <h1>Hi 👋, I'm Yash Vaghasiya</h1>
-    <h3>Full Python Developer & AI Enthusiast from India 🇮🇳</h3>
+    <h3>Python Developer & AI Enthusiast from India 🇮🇳</h3>
     <hr />
 
+    
     <section>
       <h2>💡 What I love working on:</h2>
       <ul>
@@ -81,7 +163,7 @@
         <li>🔢 Smart Applications</li>
       </ul>
     </section>
-
+    
     <section>
       <h2>📂 My Projects:</h2>
       <ul>
@@ -92,16 +174,46 @@
         <li>🧠 <a href="https://github.com/v1yash/AI" target="_blank">AI Models & Experiments</a></li>
       </ul>
     </section>
-
+    
     <section class="contact">
       <h2>📫 Connect with me:</h2>
       <p>💼 <a href="https://www.linkedin.com/in/yash-vaghasiya-a458972a9" target="_blank">LinkedIn</a></p>
       <p>📧 <a href="mailto:vaghasiyash2607@gmail.com">vaghasiyash2607@gmail.com</a></p>
     </section>
-
+    
     <section class="tech-stack">
-      <p>Tools & Technologies: <code>Python</code> <code>MySQL</code> <code>Tkinter</code> <code>Machine Learning</code> <code>GitHub</code> <code>OOP</code> <code>AI Frameworks</code></p>
+      <h2>🛠️ Tools & Technologies</h2>
+      <div class="badge-container">
+        <span class="badge">Python</span>
+        <span class="badge">MySQL</span>
+        <span class="badge">Tkinter</span>
+        <span class="badge">Machine Learning</span>
+        <span class="badge">GitHub</span>
+        <span class="badge">OOP</span>
+        <span class="badge">AI Frameworks</span>
+      </div>
     </section>
+    
+    <div class="slider">
+      <img src="1696070816430.jpg" class="slide active" />
+      <img src="20241228_171646.jpg" class="slide" />
+      <img src="20250101_073846.jpg" class="slide" />
+      <img src="IMG20240110071654.jpg" class="slide" />
+      
+    </div>
   </div>
+  
+  <script>
+    let index = 0;
+    const slides = document.querySelectorAll('.slide');
+    
+    function showSlide() {
+      slides.forEach(slide => slide.classList.remove('active'));
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('active');
+    }
+    
+    setInterval(showSlide, 3000);
+  </script>
 </body>
 </html>
