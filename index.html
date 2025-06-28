@@ -2,217 +2,261 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Yash Vaghasiya - Python Developer & AI Enthusiast</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yash Vaghasiya | AI/ML Developer</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg: #121212;
+      --text: #e0e0e0;
+      --accent: #00ffcc;
+      --link: #00ffd0;
+      --hover: #ff4081;
+    }
+
+    body.light {
+      --bg: #ffffff;
+      --text: #222;
+    }
+
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #0f0f0f, #1a1a1a, #222222);
-      color: #e0e0e0;
+      font-family: 'Roboto', sans-serif;
+      background: var(--bg);
+      color: var(--text);
       margin: 0;
-      padding: 20px;
-      line-height: 1.6;
-      background-attachment: fixed;
+      padding: 0;
+      scroll-behavior: smooth;
+      transition: background 0.4s, color 0.4s;
     }
 
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      background: rgba(255, 255, 255, 0.02);
-      border-radius: 15px;
-      padding: 30px;
-      box-shadow: 0 0 30px #00ffe010;
-    }
-
-    .profile-pic {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
-
-    .profile-pic img {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      border: 4px solid #00ffcc;
-      box-shadow: 0 0 15px #00ffcc80;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-    }
-
-    .profile-pic img:hover {
-      transform: scale(1.05);
-    }
-
-    h1, h3 {
+    header {
+      background: linear-gradient(45deg, #0f2027, #203a43, #2c5364);
+      color: white;
       text-align: center;
+      padding: 60px 20px;
+      position: relative;
     }
 
-    h1 {
-      margin-bottom: 0;
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      border: 3px solid var(--accent);
     }
 
-    h3 {
-      margin-top: 5px;
-      color: #bbb;
+    header h1 {
+      font-size: 40px;
+      margin: 10px 0 5px;
     }
 
-    hr {
-      border: 1px solid #333;
-      margin: 20px 0;
+    .ai-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 24px;
+      color: var(--accent);
+      text-shadow: 0 0 10px var(--accent);
+      animation: pulse 2s infinite;
     }
 
-    ul {
-      max-width: 600px;
-      margin: 0 auto 30px auto;
-      padding-left: 0;
-      list-style: none;
+    @keyframes pulse {
+      0%, 100% { text-shadow: 0 0 5px var(--accent); }
+      50% { text-shadow: 0 0 20px var(--accent); }
     }
 
-    li {
-      background: #1f1f1f;
-      margin: 8px 0;
-      padding: 10px 15px;
-      border-radius: 6px;
+    nav {
+      background: #222;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: var(--accent);
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--hover);
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: 30px auto;
+      background: #1e1e1e;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #333;
+    }
+
+    h2 {
+      color: var(--accent);
+    }
+
+    .project {
+      margin-bottom: 25px;
+    }
+
+    footer {
+      background: #111;
+      text-align: center;
+      padding: 20px;
+      color: #aaa;
+    }
+
+    .resume-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--accent);
+      color: black;
+      padding: 10px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 0 10px var(--accent);
+      z-index: 999;
+    }
+
+    .resume-btn:hover {
+      background: var(--hover);
+      color: white;
+    }
+
+    #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 20px;
+      background: var(--accent);
+      color: #000;
+      border: none;
+      padding: 10px;
+      border-radius: 50%;
+      font-size: 18px;
+      cursor: pointer;
+      display: none;
+      z-index: 999;
+    }
+
+    .theme-toggle {
+      position: fixed;
+      bottom: 30px;
+      left: 20px;
+      background: var(--accent);
+      border: none;
+      padding: 10px 14px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 8px;
+      z-index: 999;
     }
 
     a {
-      color: #61dafb;
-      text-decoration: none;
+      color: var(--link);
     }
 
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .contact {
-      text-align: center;
-      margin-top: 40px;
-    }
-
-    .badge-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 15px;
-    }
-
-    .badge {
-      background: linear-gradient(135deg, #00ffcc, #ff00cc);
-      color: #000;
-      padding: 8px 14px;
-      border-radius: 20px;
-      font-weight: bold;
-      box-shadow: 0 0 5px #00ffe060;
-      transition: transform 0.2s;
-      user-select: none;
-    }
-
-    .badge:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 10px #ff00cc;
-    }
-
-    .slider {
-      position: relative;
-      width: 100%;
-      max-width: 700px;
-      height: 400px;
-      margin: 30px auto;
-      overflow: hidden;
-      border-radius: 15px;
-      box-shadow: 0 0 20px #00ffe080;
-      background: #000;
-    }
-
-    .slide {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-      object-fit: contain;
-      background: #000;
-    }
-
-    .slide.active {
-      opacity: 1;
-      z-index: 1;
+    @media screen and (max-width: 600px) {
+      header h1 { font-size: 28px; }
+      .resume-btn { font-size: 14px; padding: 8px 12px; }
     }
   </style>
 </head>
 <body>
-  <div class="container">
 
-    <div class="profile-pic">
-      <img src="20241228_172113.jpg" alt="Yash Vaghasiya" />
-    </div>
+<a class="resume-btn" href="resume.pdf" download>Resume</a>
+<button id="backToTop" onclick="scrollToTop()">⬆</button>
+<button class="theme-toggle" onclick="toggleTheme()">🌙</button>
 
-    <h1>Hi 👋, I'm Yash Vaghasiya</h1>
-    <h3>Python Developer & AI Enthusiast from India 🇮🇳</h3>
-    <hr />
+<header data-aos="fade-down">
+  <img src="profile.jpg" alt="Yash Vaghasiya" />
+  <h1>Yash Vaghasiya</h1>
+  <p class="ai-title">AI / ML Developer</p>
+</header>
 
-    
-    <section>
-      <h2>💡 What I love working on:</h2>
-      <ul>
-        <li>🧠 AI & Machine Learning</li>
-        <li>🛠️ Automation Tools</li>
-        <li>🤖 Voice Assistants</li>
-        <li>🔢 Smart Applications</li>
-      </ul>
-    </section>
-    
-    <section>
-      <h2>📂 My Projects:</h2>
-      <ul>
-        <li>🎙️ <a href="https://github.com/v1yash/new-personal-assistant" target="_blank">New Personal Assistant</a></li>
-        <li>🧮 <a href="https://github.com/v1yash/smart-calculator1" target="_blank">Smart Calculator</a></li>
-        <li>🔥 <a href="https://github.com/v1yash/ahuti" target="_blank">Ahuti (AI Project)</a></li>
-        <li>🧑‍💻 <a href="https://github.com/v1yash/virtual-assistant" target="_blank">Virtual Assistant</a></li>
-        <li>🧠 <a href="https://github.com/v1yash/AI" target="_blank">AI Models & Experiments</a></li>
-      </ul>
-    </section>
-    
-    <section class="contact">
-      <h2>📫 Connect with me:</h2>
-      <p>💼 <a href="https://www.linkedin.com/in/yash-vaghasiya-a458972a9" target="_blank">LinkedIn</a></p>
-      <p>📧 <a href="mailto:vaghasiyash2607@gmail.com">vaghasiyash2607@gmail.com</a></p>
-    </section>
-    
-    <section class="tech-stack">
-      <h2>🛠️ Tools & Technologies</h2>
-      <div class="badge-container">
-        <span class="badge">Python</span>
-        <span class="badge">MySQL</span>
-        <span class="badge">Machine Learning</span>
-        <span class="badge">D.S.A.</span>
-        <span class="badge">OOP</span>
-        <span class="badge">A.I. Frameworks</span>
-      </div>
-    </section>
-    
-    <div class="slider">
-      <img src="1696070816430.jpg" class="slide active" />
-      <img src="20241228_171646.jpg" class="slide" />
-      <img src="20250101_073846.jpg" class="slide" />
-      <img src="IMG20240110071654.jpg" class="slide" />
-      
-    </div>
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about" data-aos="fade-up">
+  <h2>About Me</h2>
+  <p>I’m a Python and AI/ML developer, currently pursuing MCA at Parul University. I build smart tools using AI, automation, and data-driven logic. I enjoy solving real-world problems through technology and innovation.</p>
+</section>
+
+<section id="skills" data-aos="fade-right">
+  <h2>Skills</h2>
+  <ul>
+    <li>Languages: Python, HTML, CSS, JavaScript, C</li>
+    <li>AI/ML: TensorFlow, Scikit-learn, OpenCV, Pandas, NumPy</li>
+    <li>Frameworks: Django, Flask, Pygame</li>
+    <li>Tools: Git, VS Code, API integration</li>
+  </ul>
+</section>
+
+<section id="projects" data-aos="fade-left">
+  <h2>Projects</h2>
+
+  <div class="project">
+    <h3>🧠 Sign Language to Text Converter</h3>
+    <p>Converts live hand gestures to text using OpenCV and MediaPipe.</p>
+    <p><a href="https://github.com/v1yash/Sign-Language-to-Text-Converter" target="_blank">GitHub Repo</a></p>
   </div>
-  
-  <script>
-    let index = 0;
-    const slides = document.querySelectorAll('.slide');
-    
-    function showSlide() {
-      slides.forEach(slide => slide.classList.remove('active'));
-      index = (index + 1) % slides.length;
-      slides[index].classList.add('active');
-    }
-    
-    setInterval(showSlide, 3000);
-  </script>
+
+  <div class="project">
+    <h3>🧮 Smart Calculator</h3>
+    <p>Voice-driven calculator using pyttsx3 and speech recognition.</p>
+    <p><a href="https://github.com/v1yash/smart-calculator1" target="_blank">GitHub Repo</a></p>
+  </div>
+
+  <div class="project">
+    <h3>♟️ Chess Bot</h3>
+    <p>Minimax-based Python chess bot with timers and restart features.</p>
+    <p><a href="https://github.com/v1yash/chess_bot" target="_blank">GitHub Repo</a></p>
+  </div>
+
+  <div class="project">
+    <h3>🍉 Fruit Cutter Game</h3>
+    <p>Pygame fruit slicing game with levels, timers, and scoring system.</p>
+    <p><a href="https://github.com/v1yash/fruit-cutter" target="_blank">GitHub Repo</a></p>
+  </div>
+</section>
+
+<section id="contact" data-aos="fade-up">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:vaghasiyash2607@gmail.com">vaghasiyash2607@gmail.com</a></p>
+  <p>GitHub: <a href="https://github.com/v1yash" target="_blank">v1yash</a></p>
+  <p>Location: Vadodara, Gujarat, India</p>
+</section>
+
+<footer>
+  <p>© 2025 Yash Vaghasiya • Made with ❤️ & AI</p>
+</footer>
+
+<!-- AOS Animation -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<!-- Scroll & Theme Scripts -->
+<script>
+  // Show back to top button
+  window.onscroll = function () {
+    document.getElementById("backToTop").style.display =
+      window.scrollY > 300 ? "block" : "none";
+  };
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function toggleTheme() {
+    document.body.classList.toggle('light');
+  }
+</script>
+
 </body>
 </html>
