@@ -157,6 +157,12 @@
       color: var(--link);
     }
 
+    img.hackathon-img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 15px;
+    }
+
     @media screen and (max-width: 600px) {
       header h1 { font-size: 28px; }
       .resume-btn { font-size: 14px; padding: 8px 12px; }
@@ -165,12 +171,12 @@
 </head>
 <body>
 
-<a class="resume-btn" href="Yash Vaghasiya.pdf" download>Resume</a>
+<a class="resume-btn" href="resume.pdf" download>Resume</a>
 <button id="backToTop" onclick="scrollToTop()">⬆</button>
 <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
 
 <header data-aos="fade-down">
-  <img src="20241228_172113.jpg" alt="Yash Vaghasiya" />
+  <img src="profile.jpg" alt="Yash Vaghasiya" />
   <h1>Yash Vaghasiya</h1>
   <p class="ai-title">AI / ML Developer</p>
 </header>
@@ -179,21 +185,22 @@
   <a href="#about">About</a>
   <a href="#skills">Skills</a>
   <a href="#projects">Projects</a>
+  <a href="#achievements">Achievements</a>
   <a href="#contact">Contact</a>
 </nav>
 
 <section id="about" data-aos="fade-up">
   <h2>About Me</h2>
-  <p>I’m a Python and AI/ML developer, currently pursuing MCA at Parul University. I build smart tools using AI, automation, and data-driven logic. I enjoy solving real-world problems through technology and innovation.</p>
+  <p>I’m a Python developer and AI/ML enthusiast currently pursuing MCA at Parul University. I specialize in intelligent applications, machine learning tools, and real-time systems using Python, OpenCV, and Pygame. My goal is to blend creativity with technology to solve meaningful problems.</p>
 </section>
 
 <section id="skills" data-aos="fade-right">
   <h2>Skills</h2>
   <ul>
-    <li>Languages: Python, HTML, CSS, JavaScript, C</li>
-    <li>AI/ML: TensorFlow, Scikit-learn, OpenCV, Pandas, NumPy</li>
+    <li>Languages: Python, C, HTML, CSS, JavaScript</li>
+    <li>AI/ML Tools: TensorFlow, Scikit-learn, OpenCV, Pandas, NumPy</li>
     <li>Frameworks: Django, Flask, Pygame</li>
-    <li>Tools: Git, VS Code, API integration</li>
+    <li>Tools: Git, VS Code, API Integration</li>
   </ul>
 </section>
 
@@ -202,49 +209,51 @@
 
   <div class="project">
     <h3>🧠 Sign Language to Text Converter</h3>
-    <p>Converts live hand gestures to text using OpenCV and MediaPipe.</p>
+    <p>Convert live hand gestures to text using OpenCV and MediaPipe.</p>
     <p><a href="https://github.com/v1yash/Sign-Language-to-Text-Converter" target="_blank">GitHub Repo</a></p>
   </div>
 
   <div class="project">
     <h3>🧮 Smart Calculator</h3>
-    <p>Voice-driven calculator using pyttsx3 and speech recognition.</p>
+    <p>Voice-based calculator using pyttsx3 and speech recognition in Python.</p>
     <p><a href="https://github.com/v1yash/smart-calculator1" target="_blank">GitHub Repo</a></p>
   </div>
 
   <div class="project">
     <h3>♟️ Chess Bot</h3>
-    <p>Minimax-based Python chess bot with timers and restart features.</p>
+    <p>Chess game with a Minimax AI bot, timers, score tracking, and restart features built using Pygame.</p>
     <p><a href="https://github.com/v1yash/chess_bot" target="_blank">GitHub Repo</a></p>
   </div>
 
   <div class="project">
     <h3>🍉 Fruit Cutter Game</h3>
-    <p>Pygame fruit slicing game with levels, timers, and scoring system.</p>
+    <p>Arcade-style game in Pygame with random fruit slicing, scores, timer, difficulty modes, and high-score tracking.</p>
     <p><a href="https://github.com/v1yash/fruit-cutter" target="_blank">GitHub Repo</a></p>
   </div>
+</section>
+
+<section id="achievements" data-aos="fade-up">
+  <h2>Achievements</h2>
+  <ul>
+    <li><strong>Vadodara Hackathon 5.0:</strong> Successfully participated and completed a live hackathon event focused on innovative solutions. Built an AI-powered health assistant using Python and OpenCV. Worked as a team member solving real-world problems in a high-pressure environment.</li>
+  </ul>
+  <img class="hackathon-img" src="hack.jpg" alt="Vadodara Hackathon 5.0" />
 </section>
 
 <section id="contact" data-aos="fade-up">
   <h2>Contact</h2>
   <p>Email: <a href="mailto:vaghasiyash2607@gmail.com">vaghasiyash2607@gmail.com</a></p>
-  <p>GitHub: <a href="https://github.com/v1yash" target="_blank">v1yash</a></p>
+  <p>GitHub: <a href="https://github.com/v1yash" target="_blank">github.com/v1yash</a></p>
   <p>Location: Vadodara, Gujarat, India</p>
 </section>
 
 <footer>
-  <p>© 2025 Yash Vaghasiya • Made with ❤️ & AI</p>
+  <p>© 2025 Yash Vaghasiya • Built with ❤️ and AI</p>
 </footer>
 
-<!-- AOS Animation -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init();
-</script>
-
-<!-- Scroll & Theme Scripts -->
-<script>
-  // Show back to top button
   window.onscroll = function () {
     document.getElementById("backToTop").style.display =
       window.scrollY > 300 ? "block" : "none";
@@ -252,7 +261,6 @@
   function scrollToTop() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
-
   function toggleTheme() {
     document.body.classList.toggle('light');
   }
