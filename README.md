@@ -12,7 +12,7 @@
 📂 My Projects:
 - 🎙️ [New Personal Assistant](https://github.com/v1yash/new-personal-assistant)
 - 🧮 [Smart Calculator](https://github.com/v1yash/smart-calculator1)
-- 🌐 [Ahuti Technocraft](https://github.com/v1yash/Aahuti-Technocraft)
+- 🌐 [Ahuti Technocrafts](https://github.com/v1yash/Aahuti-Technocrafts)
 - 🧑‍💻 [Virtual Assistant](https://github.com/v1yash/virtual-assistant)
 - 🧠 [AI Models & Experiments](https://github.com/v1yash/AI)
 
